@@ -17,7 +17,7 @@ public class ProjectTask {
 	
 	@NotBlank(message="Summary need to be submit!!")
 	private String summary;
-	private String acceptanceCritics;
+	private String acceptanceCriteria;
 	private String status;
 	public Long getId() {
 		return id;
@@ -31,11 +31,11 @@ public class ProjectTask {
 	public void setSummary(String summary) {
 		this.summary = summary;
 	}
-	public String getAcceptanceCritics() {
-		return acceptanceCritics;
+	public String getacceptanceCriteria() {
+		return acceptanceCriteria;
 	}
-	public void setAcceptanceCritics(String acceptanceCritics) {
-		this.acceptanceCritics = acceptanceCritics;
+	public void setacceptanceCriteria(String acceptanceCriteria) {
+		this.acceptanceCriteria = acceptanceCriteria;
 	}
 	public String getStatus() {
 		return status;
@@ -47,14 +47,21 @@ public class ProjectTask {
 	
 	
 	public ProjectTask(Long id, @NotBlank(message = "Summary need to be submit!!") String summary,
-			String acceptanceCritics, String status) {
+			String acceptanceCriteria, String status) {
 		super();
 		this.id = id;
 		this.summary = summary;
-		this.acceptanceCritics = acceptanceCritics;
+		this.acceptanceCriteria = acceptanceCriteria;
 		this.status = status;
 	}
 public ProjectTask() {
 	
 }
+@Override
+public String toString() {
+	return "ProjectTask [id=" + id + ", summary=" + summary + ", acceptanceCriteria=" + acceptanceCriteria + ", status="
+			+ status + "]";
+}
+
+
 }
